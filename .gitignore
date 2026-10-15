@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.DS_Store
+wandb/
+logs/
+outputs/
+checkpoints/
+models/
+*.pt
+*.pth
+*.mp4
+!assets/teaser.mp4
+.hf_cache/
+*.err
+*.out
+.ipynb_checkpoints/
+# Local HF staging (weights live on the Hub)
+hf_repo/checkpoints/
+hf_repo/
