@@ -18,7 +18,7 @@
 
 ## Teaser
 
-Same first frame. ViMoLa predicts a motion field from the caption alone, then generates the video — **no trajectories at inference**.
+Same first frame and prompt. Frozen Wan stays nearly static; ViMoLa predicts a motion field from the caption and produces the uphill motion — **no trajectories at inference**.
 
 ![ViMoLa Sisyphus teaser](assets/teaser.gif)
 
@@ -26,7 +26,8 @@ Same first frame. ViMoLa predicts a motion field from the caption alone, then ge
 
 1. **Input frame** — conditioning image  
 2. **Predicted motion field** — T2M discrete tokens decoded to trajectories  
-3. **ViMoLa output** — Wan 2.2 + adapters, text + image only  
+3. **Wan 2.2** — text + image only (little / no motion)  
+4. **ViMoLa** — same text + image, with motion tokens  
 
 ---
 
@@ -65,8 +66,8 @@ You also need the public **Wan 2.2 TI2V 5B** Diffusers checkpoint (not redistrib
 ### 1. Install
 
 ```bash
-git clone git@bitbucket.org:aclabneu/vimola-discrete-motion-tokens-for-language-guided-video.git
-cd vimola-discrete-motion-tokens-for-language-guided-video
+git clone <this-repo>
+cd vimola
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -145,7 +146,6 @@ At inference: **text + first frame only**.
 ## Links
 
 - **Model weights:** https://huggingface.co/bishoygaloaa/ViMoLa  
-- **Code (Bitbucket):** https://bitbucket.org/aclabneu/vimola-discrete-motion-tokens-for-language-guided-video  
 - **Lab:** [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University
 
 ## License
