@@ -1,6 +1,7 @@
 # ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation
 
 [![WACV 2027](https://img.shields.io/badge/WACV-2027-accepted-success)](https://wacv2027.thecvf.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-ostadabbas%2FViMoLa-black?logo=github)](https://github.com/ostadabbas/ViMoLa)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Weights-yellow)](https://huggingface.co/bishoygaloaa/ViMoLa)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -66,8 +67,8 @@ You also need the public **Wan 2.2 TI2V 5B** Diffusers checkpoint (not redistrib
 ### 1. Install
 
 ```bash
-git clone <this-repo>
-cd vimola
+git clone https://github.com/ostadabbas/ViMoLa.git
+cd ViMoLa
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -145,6 +146,7 @@ At inference: **text + first frame only**.
 
 ## Links
 
+- **Code:** https://github.com/ostadabbas/ViMoLa  
 - **Model weights:** https://huggingface.co/bishoygaloaa/ViMoLa  
 - **Lab:** [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University
 
