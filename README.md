@@ -1,11 +1,19 @@
 # ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation
 
 [![WACV 2027](https://img.shields.io/badge/WACV-2027-accepted-success)](https://wacv2027.thecvf.com/)
+[![Project Page](https://img.shields.io/badge/Project-Page-0A66C2)](https://ostadabbas.github.io/ViMoLa/)
 [![GitHub](https://img.shields.io/badge/GitHub-ostadabbas%2FViMoLa-black?logo=github)](https://github.com/ostadabbas/ViMoLa)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Weights-yellow)](https://huggingface.co/bishoygaloaa/ViMoLa)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **Accepted at WACV 2027**
+
+| Resource | Link |
+|---|---|
+| **Project page** | https://ostadabbas.github.io/ViMoLa/ |
+| **Code (this repo)** | https://github.com/ostadabbas/ViMoLa |
+| **Model weights** | https://huggingface.co/bishoygaloaa/ViMoLa |
+| **Lab** | [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University |
 
 **ViMoLa** (*Video Motion Language*) predicts discrete motion tokens from text and injects them into a **frozen** Wan 2.2 image-to-video backbone. Language is the only interface at inference — no tracks, drags, or camera paths.
 
@@ -13,7 +21,6 @@
 |---|---|
 | **Paper** | *ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation* |
 | **Authors** | Bishoy Galoaa, Sarah Ostadabbas (Northeastern University) |
-| **Weights + inference** | [![HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-md.svg)](https://huggingface.co/bishoygaloaa/ViMoLa) |
 
 ---
 
@@ -146,6 +153,7 @@ At inference: **text + first frame only**.
 
 ## Links
 
+- **Project page:** https://ostadabbas.github.io/ViMoLa/  
 - **Code:** https://github.com/ostadabbas/ViMoLa  
 - **Model weights:** https://huggingface.co/bishoygaloaa/ViMoLa  
 - **Lab:** [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University
