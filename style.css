@@ -1,0 +1,81 @@
+:root{
+  --ink:#1a1d24; --muted:#5b6472; --line:#e6e8ee; --bg:#f7f8fb; --card:#fff;
+  --accent:#2e7dd7; --accent2:#e0431f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); background:var(--bg);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+
+header{
+  text-align:center; padding:42px 20px 22px; background:var(--card); border-bottom:1px solid var(--line);
+}
+header h1{max-width:1000px; margin:0 auto; font-size:1.9rem; line-height:1.25; letter-spacing:-.01em}
+header .sub{color:var(--muted); margin:.5rem 0 1rem; font-size:.95rem}
+header .links{margin:0 0 1rem}
+header .links .dl{margin:0 .3rem}
+nav a{margin:0 .6rem; font-weight:600; font-size:.95rem}
+
+main{max-width:1180px; margin:0 auto; padding:0 20px 60px}
+section{padding:34px 0; border-bottom:1px solid var(--line)}
+h2{font-size:1.45rem; margin:.2rem 0 1rem}
+h3.grouphdr{font-size:1.05rem; color:var(--muted); margin:1.8rem 0 .7rem; font-weight:700}
+.note{color:var(--muted); font-size:.92rem; margin:-.3rem 0 1.2rem}
+
+.banner{
+  margin:26px 0 4px; padding:14px 18px; background:#fff7ed; border:1px solid #f3d6b3;
+  border-radius:10px; font-size:.95rem;
+}
+
+#abstract p{max-width:980px; text-align:justify}
+
+.paperfig{margin:0 0 26px; text-align:center}
+.paperfig img{max-width:100%; border:1px solid var(--line); border-radius:10px; background:#fff}
+.paperfig figcaption{color:var(--muted); font-size:.9rem; margin-top:.5rem; max-width:980px;
+  margin-left:auto; margin-right:auto; text-align:left}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:18px}
+.tile{margin:0; background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;
+  box-shadow:0 1px 2px rgba(20,30,50,.04)}
+.vidwrap{position:relative; background:#11131a; line-height:0}
+.vidwrap video{width:100%; height:auto; display:block; cursor:pointer}
+.speed{position:absolute; right:8px; bottom:8px; display:flex; gap:4px; opacity:.92}
+.speed button{
+  font:600 11px/1 inherit; color:#fff; background:rgba(20,22,30,.62); border:1px solid rgba(255,255,255,.25);
+  border-radius:6px; padding:4px 6px; cursor:pointer; backdrop-filter:blur(2px);
+}
+.speed button.on{background:var(--accent); border-color:var(--accent)}
+figcaption{padding:11px 13px 13px; font-size:.92rem}
+figcaption .tag{display:inline-block; font:700 10.5px/1 inherit; letter-spacing:.02em; text-transform:uppercase;
+  color:var(--accent); background:#eaf2fc; border-radius:5px; padding:3px 6px; margin-right:7px; vertical-align:1px}
+figcaption b{font-weight:700}
+figcaption .cap{display:block; color:var(--muted); margin-top:3px; font-size:.88rem}
+
+/* Ground-truth annotated-video section */
+.gtgrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:18px}
+.gtcard{margin:0; background:var(--card); border:1px solid var(--line); border-radius:12px;
+  overflow:hidden; box-shadow:0 1px 2px rgba(20,30,50,.04)}
+.gtcard figcaption{padding:12px 15px 14px; font-size:.95rem}
+.gtcard figcaption>b{display:block; margin-bottom:8px; font-size:1.02rem}
+.gtsubj{display:flex; gap:9px; align-items:flex-start; margin:6px 0}
+.gtsubj .swatch{flex:0 0 auto; width:13px; height:13px; border-radius:3px; margin-top:5px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+.gtsubj ul{margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:5px 14px}
+.gtsubj li{color:var(--ink); font-size:.92rem}
+.trange{display:inline-block; font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  color:var(--muted); background:var(--bg); border:1px solid var(--line); border-radius:5px;
+  padding:2px 5px; margin-right:3px; vertical-align:1px}
+
+.dl{font-weight:700; background:var(--accent); color:#fff; padding:5px 12px; border-radius:7px}
+.dl:hover{text-decoration:none; filter:brightness(1.05)}
+
+footer{text-align:center; color:var(--muted); padding:26px 20px; font-size:.88rem}
+
+@media (max-width:640px){
+  header h1{font-size:1.45rem}
+  .grid{grid-template-columns:1fr}
+}

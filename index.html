@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation</title>
+<meta name="description" content="ViMoLa (WACV 2027) — discrete motion tokens for language-guided video generation.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation</h1>
+  <p class="sub">Bishoy Galoaa &middot; Sarah Ostadabbas<br>
+  Augmented Cognition Lab, Northeastern University<br>
+  <strong>Accepted at WACV 2027</strong></p>
+  <p class="links">
+    <a class="dl" href="https://github.com/ostadabbas/ViMoLa">Code</a>
+    <a class="dl" href="https://huggingface.co/bishoygaloaa/ViMoLa">Model</a>
+  </p>
+  <nav>
+    <a href="#teaser">Teaser</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#method">Method</a>
+    <a href="#code">Code</a>
+  </nav>
+</header>
+
+<main>
+  <section id="teaser">
+    <h2>Teaser</h2>
+    <p class="note">Same first frame and prompt. Frozen Wan stays nearly static; ViMoLa predicts a motion field from the caption and produces the uphill motion — <b>no trajectories at inference</b>.</p>
+    <figure class="paperfig">
+      <img src="assets/teaser.gif" alt="ViMoLa Sisyphus teaser: input, motion field, Wan static, ViMoLa motion">
+      <figcaption>
+        <b>Prompt:</b> “pushing a boulder up a steep hill” —
+        (1) input frame →
+        (2) predicted motion field (T2M tokens) →
+        (3) Wan 2.2 (text + image, little/no motion) →
+        (4) ViMoLa (text + image with motion tokens).
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>
+      Controllable video generation typically conditions a diffusion backbone on dense motion
+      trajectories, camera paths, or optical flow — interfaces that are hard for users to specify.
+      We present <b>ViMoLa</b> (<i>Video Motion Language</i>), which predicts a compact set of
+      <b>discrete motion tokens</b> from language alone and injects them into a <b>frozen</b>
+      Wan&nbsp;2.2 image-to-video backbone through zero-gated adapters. A spatial VQ-VAE compresses
+      CoTracker fields into 64 tokens; a lightweight text-to-motion transformer predicts those tokens
+      from a caption; and zero-initialized cross-attention adapters steer every DiT block without
+      editing the pretrained weights. At inference the only inputs are text and a first frame —
+      no tracks, drags, or camera paths.
+    </p>
+  </section>
+
+  <section id="method">
+    <h2>Method</h2>
+    <figure class="paperfig">
+      <img src="assets/03_motion_field_clean.png" alt="Predicted motion field">
+      <figcaption><b>Motion field.</b> Discrete T2M tokens decoded back to a spatial trajectory field used to condition generation.</figcaption>
+    </figure>
+    <figure class="paperfig">
+      <img src="assets/07_generated_strip.png" alt="Generated video strip">
+      <figcaption><b>Generated frames.</b> Wan 2.2 + ViMoLa adapters, guided only by text and the first frame.</figcaption>
+    </figure>
+    <figure class="paperfig">
+      <img src="assets/08_gate_activation.png" alt="Zero-gate activation">
+      <figcaption><b>Zero-gated adapters.</b> Learned gates open selectively so motion control does not overwrite the frozen backbone's appearance prior.</figcaption>
+    </figure>
+  </section>
+
+  <section id="code">
+    <h2>Code &amp; weights</h2>
+    <p>
+      All links live on the GitHub repo:
+      <a href="https://github.com/ostadabbas/ViMoLa">ostadabbas/ViMoLa</a>.
+      Pretrained checkpoints (tokenizer, T2M, adapters) are on Hugging Face:
+      <a href="https://huggingface.co/bishoygaloaa/ViMoLa">bishoygaloaa/ViMoLa</a>.
+    </p>
+    <pre style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;font-size:.9rem"><code>git clone https://github.com/ostadabbas/ViMoLa.git
+cd ViMoLa
+pip install -r requirements.txt
+python scripts/download_weights.py --out checkpoints
+bash scripts/infer.sh assets/sisyphus_input.png "pushing a boulder up a steep hill"</code></pre>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Augmented Cognition Lab, Northeastern University · WACV 2027
+</footer>
+</body>
+</html>
