@@ -1,7 +1,7 @@
 # ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation
 
 [![WACV 2027](https://img.shields.io/badge/WACV-2027-accepted-success)](https://wacv2027.thecvf.com/)
-[![Project Page](https://img.shields.io/badge/Project-Page-0A66C2)](https://ostadabbas.github.io/ViMoLa/)
+[![Project Page](https://img.shields.io/badge/Project-Page-0A66C2)](https://bishoymoussa.github.io/ViMoLa.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-ostadabbas%2FViMoLa-black?logo=github)](https://github.com/ostadabbas/ViMoLa)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Weights-yellow)](https://huggingface.co/bishoygaloaa/ViMoLa)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -10,7 +10,7 @@
 
 | Resource | Link |
 |---|---|
-| **Project page** | https://ostadabbas.github.io/ViMoLa/ |
+| **Project page** | https://bishoymoussa.github.io/ViMoLa.io/ |
 | **Code (this repo)** | https://github.com/ostadabbas/ViMoLa |
 | **Model weights** | https://huggingface.co/bishoygaloaa/ViMoLa |
 | **Lab** | [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University |
@@ -153,7 +153,7 @@ At inference: **text + first frame only**.
 
 ## Links
 
-- **Project page:** https://ostadabbas.github.io/ViMoLa/  
+- **Project page:** https://bishoymoussa.github.io/ViMoLa.io/  
 - **Code:** https://github.com/ostadabbas/ViMoLa  
 - **Model weights:** https://huggingface.co/bishoygaloaa/ViMoLa  
 - **Lab:** [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University
