@@ -1,6 +1,7 @@
 # ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation
 
 [![WACV 2027](https://img.shields.io/badge/WACV-2027-accepted-success)](https://wacv2027.thecvf.com/)
+[![arXiv](https://img.shields.io/badge/arXiv-2610.25595-b31b1b.svg)](https://arxiv.org/abs/2610.25595)
 [![GitHub](https://img.shields.io/badge/GitHub-ostadabbas%2FViMoLa-black?logo=github)](https://github.com/ostadabbas/ViMoLa)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Weights-yellow)](https://huggingface.co/bishoygaloaa/ViMoLa)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -9,6 +10,7 @@
 
 | Resource | Link |
 |---|---|
+| **Paper (arXiv)** | https://arxiv.org/abs/2610.25595 · [PDF](https://arxiv.org/pdf/2610.25595) |
 | **Code (this repo)** | https://github.com/ostadabbas/ViMoLa |
 | **Model weights** | https://huggingface.co/bishoygaloaa/ViMoLa |
 | **Lab** | [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University |
@@ -139,6 +141,14 @@ At inference: **text + first frame only**.
 ## Citation
 
 ```bibtex
+@article{galoaa2026vimola,
+  title   = {ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation},
+  author  = {Galoaa, Bishoy and Ostadabbas, Sarah},
+  journal = {arXiv preprint arXiv:2610.25595},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2610.25595}
+}
+
 @inproceedings{galoaa2027vimola,
   title     = {ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation},
   author    = {Galoaa, Bishoy and Ostadabbas, Sarah},
@@ -151,6 +161,7 @@ At inference: **text + first frame only**.
 
 ## Links
 
+- **Paper:** https://arxiv.org/abs/2610.25595  
 - **Code:** https://github.com/ostadabbas/ViMoLa  
 - **Model weights:** https://huggingface.co/bishoygaloaa/ViMoLa  
 - **Lab:** [Augmented Cognition Lab](https://web.northeastern.edu/ostadabbas/) · Northeastern University
