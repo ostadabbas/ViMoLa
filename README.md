@@ -1,6 +1,6 @@
 # ViMoLa: Discrete Motion Tokens for Language-Guided Video Generation
 
-[![WACV 2027](https://img.shields.io/badge/WACV-2027-accepted-success)](https://wacv2027.thecvf.com/)
+[![WACV 2027](https://img.shields.io/badge/WACV_2027-accepted-success)](https://wacv2027.thecvf.com/)
 [![arXiv](https://img.shields.io/badge/arXiv-2610.25595-b31b1b.svg)](https://arxiv.org/abs/2610.25595)
 [![GitHub](https://img.shields.io/badge/GitHub-ostadabbas%2FViMoLa-black?logo=github)](https://github.com/ostadabbas/ViMoLa)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model%20Weights-yellow)](https://huggingface.co/bishoygaloaa/ViMoLa)
